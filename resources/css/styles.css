@@ -1,0 +1,540 @@
+/* full body declaration */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #fff;
+  color: #555;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.clearfix {
+  zoom: 1
+}
+
+.clearfix::after {
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/* top header section */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+/* logo and navigation bar */
+.logo {
+  height: 100px;
+  width: auto;
+  float: left;
+  margin-top: 20px;
+}
+
+.logo-black {
+  display: none;
+  height: 50px;
+  width: auto;
+  float: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 55px;
+}
+
+.nav-list {
+  display: inline-block;
+}
+
+.nav-item:link, .nav-item:visited {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 90%;
+  margin-left: 40px;
+  border-bottom: 2px trasparent #e67e22;
+  transition: border-bottom 0.2s;
+}
+
+.nav-item:hover, .nav-item:active {
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 90%;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e67e22;
+}
+
+.mobile-nav-icon {
+  float: right;
+  padding: 48px;
+  display: none;
+}
+
+.mobile-nav-icon ion-icon {
+  color: #fff;
+  font-size: 190
+}
+
+/* sticky navi */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(253, 253, 253, 0.99);
+  box-shadow: 0 2px 2px #f4f1ef;
+  z-index: 999;
+}
+
+.sticky .nav-item:link, .sticky .nav-item:visited {
+  color: #555;
+  padding: 16px 0;
+}
+
+.sticky .logo-black {
+  display: block;
+}
+
+.sticky .logo {
+  display: none;
+}
+
+.sticky .main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 15px;
+}
+
+/* top heading */
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 240%;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+
+h2 {
+  font-size: 180%;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 110%;
+  font-weight: 400;
+  text-transform: uppercase;
+  word-spacing: 1px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+h2:after {
+  display: block;
+  height: 2px;
+  background-color: #e67e22;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.long-copy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero-text-box {
+  max-width: 1140px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* header button */
+.btn:link, .btn:visited {
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 200px;
+  text-decoration: none;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  margin-right: 15px;
+}
+
+.btn-full:link, .btn-full:visited {
+  background-color: #e67e22;
+  border: 1px solid #e67e22;
+  color: #fff;
+}
+
+.btn-ghost:link, .btn-ghost:visited {
+  border: 1px solid #e67e22;
+  color: #e67e22;
+}
+
+.btn:hover, .btn:active {
+  background-color: #cf6d17;
+  border: 1px solid #cf6d17;
+  color: #fff;
+}
+
+/* features section */
+section {
+  padding: 80px 0;
+}
+
+ion-icon {
+  font-size: 350%;
+  color: #e67e22;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.box {
+  padding: 1%;
+}
+
+.box p {
+  font-size: 90%;
+  line-height: 145%;
+}
+
+/* fav meal section */
+.section-meal {
+  padding: 0;
+}
+
+.meal-showcase {
+  list-style: none;
+  width: 100%;
+}
+
+.meal-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+.meal-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.meal-photo img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+/* how it works */
+.section-steps {
+  background: #f4f4f4;
+}
+
+.steps-box:first-child {
+  text-align: right;
+  padding-right: 3%;
+  margin-top: 30px;
+}
+
+.steps-box:last-child {
+  padding-left: 3%;
+  margin-top: 70px;
+}
+
+.works-step {
+  margin-bottom: 30px;
+}
+
+.works-step div {
+  color: #e67e22;
+  border: 2px solid #e67e22;
+  display: inline-block;
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  padding: 5px;
+  float: left;
+  font-size: 150%;
+  margin-right: 25px;
+}
+
+.works-step:last-of-type {
+  margin-bottom: 80px;
+}
+
+.phn-img {
+  width: 40%;
+}
+
+.btn-app img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+/* ---------------------------------------
+               city section
+-------------------------------------- */
+.city-features {
+  margin-bottom: 10px;
+}
+
+.city-features a {
+  color: #e67e22;
+}
+
+.city-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.city-features ion-icon {
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.city-features span {}
+
+/* ---------------------------------------
+                 testemonial section
+  -------------------------------------- */
+.testemonial-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/back-customers.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  background-attachment: fixed;
+}
+
+blockquote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+}
+
+blockquote:before {
+  content: "\201C";
+  font-size: 600%;
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: -5px;
+}
+
+cite {
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+
+cite img {
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* .............................
+section plan
+............................. */
+.section-plans {
+  background-color: #f4f4f4;
+}
+
+.plan-box {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%;
+  box-shadow: 0 2px 2px #efefef;
+}
+
+.plan-box div {
+  padding: 15px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-price {
+  font-size: 300%;
+  font-weight: 300;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+.plan-price span {
+  font-size: 30%;
+  font-weight: 300;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+.plan-price-meal {
+  font-size: 80%;
+  margin-bottom: 10px;
+}
+
+.plan-list ion-icon {
+  font-size: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0;
+}
+
+.plan-list li {
+  list-style: none;
+  font-size: 90%;
+  margin-bottom: 15px;
+}
+
+.plan-box div:last-child {
+  text-align: center;
+}
+
+.plan-box div:first-child {
+  background-color: #FCFCFC;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* .............................
+section form
+............................ */
+.contact-form {
+  width: 60%;
+  margin-left: 20%;
+}
+
+input[type=text], input[type=email], select, textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid rgb(204, 204, 204);
+}
+
+input[type=checkbox] {
+  margin: 10px 5px 10px 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* ..............................................
+footer
+.............................................. */
+.footer-nav {
+  text-align: center;
+}
+
+.footer-logo {
+  text-align: center;
+}
+
+.footer-nav li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 10px;
+  transition: color 0.2s;
+}
+
+.footer-nav li:hover {
+  list-style: none;
+  display: inline-block;
+  margin-right: 10px;
+  color: white;
+}
+
+.footer-logo li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-logo ion-icon {
+  font-size: 32px;
+  display: inline-block;
+  color: grey;
+  transition: color 0.4s;
+}
+
+.footer-logo ion-icon:hover {
+  font-size: 32px;
+  display: inline-block;
+  color: white;
+}
+
+.copyright {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.section-footer {
+  background-color: rgb(51, 51, 51);
+  padding: 30px 0;
+  color: grey;
+  font-size: 90%;
+}
+
+/* for animation */
+/* .jswp1, .jswp2, .jswp3 {
+  opacity: 0;
+  animation-duration: 2s;
+}
+
+.jswp4 {
+  animation-duration: 2s;
+}
+
+.jswp1.animated, .jswp2.animated, .jswp3.animated {
+  opacity: 1;
+} */
